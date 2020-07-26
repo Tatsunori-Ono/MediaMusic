@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Music - Library</title>
+  <link href="https://fonts.googleapis.com/css?family=Chewy|Cookie|Limelight|Pacifico|Plaster|Sacramento|Satisfy|Stoke|Yellowtail|Geo|Oswald|Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <script src="library/p5.min.js"></script>
+  <script src="library/p5.sound.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+</head>
+<body>
+  <div class="cursor"></div>
+  <script>
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.setAttribute("style", "top: " + (e.pageY - 13) + "px; left: " + (e.pageX - 13) + "px;")
+    })
+  </script>
+  <div class="library">
+    <header>
+      <h1>Your Library</h1>
+      <p>Select your favorite song.</p>
+    </header>
+    <div class="grid">
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/低血ボルト.jpg" alt="">
+          <p>低血ボルト<br>ずっと真夜中でいいのに。</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/すきがかさなる.jpg" alt="">
+          <p>すきがかさなる<br>ようせいさわっくま</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/怪獣の花唄.jpg" alt="">
+          <p>怪獣の花唄<br>Vaundy</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/紅蓮華.png" alt="">
+          <p>紅蓮華<br>えぐっち</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/夜に駆ける.jpg" alt="">
+          <p>夜に駆ける<br>YOASOBI</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/春ひさぎ.jpg" alt="">
+          <p>春ひさぎ<br>ヨルシカ</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/お勉強しといてよ.jpg" alt="">
+          <p>お勉強しといてよ<br>ずっと真夜中でいいのに。</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/Unhappyを愛さないで.jpg" alt="">
+          <p>Unhappyを愛さないで<br>THE BINARY</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/白日.jpg" alt="">
+          <p>白日<br>King Gnu</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/EgoもIdも単純に.jpg" alt="">
+          <p>EgoもIdも単純に<br>THE BINARY</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/春を告げる.jpg" alt="">
+          <p>春を告げる<br>yama</p>
+        </a>
+      </div>
+      <div class="song-album">
+        <a href="songplayer.html">
+          <img src="images/flos.jpg" alt="">
+          <p>flos<br>R Sound Design</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

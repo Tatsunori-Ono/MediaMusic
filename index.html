@@ -4,21 +4,33 @@
 <head>
   <!-- 文字化けをしないように文字コードを指定 -->
   <meta charset="UTF-8">
-
+  <title>Media Music</title>
   <!-- google Fontsの読み込み -->
   <link href="https://fonts.googleapis.com/css?family=Chewy|Cookie|Limelight|Pacifico|Plaster|Sacramento|Satisfy|Stoke|Yellowtail|Geo|Oswald|Lobster" rel="stylesheet">
-
   <!-- CSSファイルを連携 -->
   <link rel="stylesheet" href="common.css">
-
   <!-- ライブラリを連携 -->
   <script src="library/p5.min.js"></script>
   <script src="library/p5.sound.min.js"></script>
-
-  <!-- JavaScriptファイルを連携 -->
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
 </head>
 
 <body>
+  <div class="cursor"></div>
+  <script>
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.setAttribute("style", "top: "+(e.pageY-13)+"px; left: "+(e.pageX-13)+"px;")
+    })
+  </script>
+  <div class="app">
+    <header>
+      <h1>Media Music</h1>
+      <p>~Visual Music Representation~</p>
+    </header>
+    <div class="start-screen">
+      <a href="library.html" class="btn-edge">Get Started</a>
+    </div>
+  </div>
 </body>
 </html>

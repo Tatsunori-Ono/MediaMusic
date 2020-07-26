@@ -6,14 +6,196 @@
 }
 
 body {
-  background: #333;
+  background: rgb(220, 220, 220);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  cursor: url('mouse.js'), auto;
 }
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  border: 3px solid red;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim .5s infinite alternate;
+}
+
+/*
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid grey;
+  border-radius: 50%;
+  opacity: .5;
+  top: -8px;
+  left: -8px;
+}
+*/
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
 
 canvas {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  display: block;
+  top: 0;
+  left: 0;
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
+.cursor {
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.app {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 170px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: bold;
+  color: white;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: red;
+  margin-top: 100px;
+}
+
+header p {
+  font-size: 55px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: bold;
+  color: white;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: red;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: auto;
+}
+
+.library header h1 {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 95px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: bold;
+  color: white;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: red;
+  margin-top: 50px;
+}
+
+.library header p {
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: white;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: red;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.song-album p {
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.song-album img {
+  border-radius: 5%;
+  padding:1px;
+  border:3px solid blue;
+  background-color:blue;
+}
+
+.btn-edge {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 40px;
+  margin-top: 250px;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: red;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: bold;
+  color: rgb(255, 255, 255);
+  transition: .4s;
+}
+
+.btn-edge:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 31px rgb(220, 220, 220);
+  border-bottom: solid 51px transparent;
+  z-index: 1;
+  transition: .4s;
+}
+
+.btn-edge:after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 31px transparent;
+  border-bottom: solid 51px rgb(220, 220, 220);
+  z-index: 1;
+  transition: .4s;
+}
+
+.btn-edge:hover:before, .btn-edge:hover:after {
+  border-left-width: 50px;
+}
+
+.deg_btn:hover {
+  background: #2c3148;
+}
+
+.grid {
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 6%;
+  margin-left: 100px;
+  margin-right: 100px;;
+  margin-bottom: 50px;
+}

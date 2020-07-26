@@ -106,7 +106,6 @@ function draw() {
     text(letters[i], x, y);
   }
   */
-}
 
 class Circle {
   constructor(x, y) {

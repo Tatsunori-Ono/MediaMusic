@@ -17,6 +17,18 @@ function preload() {
   sound = loadSound('sounds/低血ボルト.mp3');
 }
 
+// マウスがクリックされたときに呼び出す関数
+function mouseClicked() {
+  // サウンドが再生中のとき
+  if (sound.isPlaying()) {
+    // サウンドを一時停止
+    sound.pause();
+  } else {
+    // サウンドを再生
+    sound.play();
+  }
+}
+
 // 全体の初期化（最初に一回だけ呼ばれる）
 function setup() {
   // キャンバスをつくる
